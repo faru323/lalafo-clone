@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiFacebookFill } from 'react-icons//ri';
 import { AiOutlineTwitter} from 'react-icons//ai';
 import { FaInstagram } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import s from "./footer.module.scss"
 const Footer = () => {
 
  
-  const [value, setValue] = React.useState('fruit');
+  const [value, setValue] = useState('fruit');
  
   const handleChange = (event) => {
  
