@@ -9,7 +9,7 @@ const saltRounds = 10;
 const secretKey = "secretkey";
 
 app.post("/register", async (req, res) => {
-  const { username, password } = req.body;
+  const { name, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, saltRounds);
   res.send("Successfully Registered!");
 });

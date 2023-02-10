@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 const dotenv = require("dotenv");
-dotenv.config();
 const mongoose = require("mongoose");
+require("./routes/cards")(app);
+require("./routes/users")(app);
+dotenv.config();
 
 mongoose.set("strictQuery", false);
 const dbUri = process.env.DB_URI;
